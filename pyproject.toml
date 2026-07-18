@@ -1,0 +1,9 @@
+[project]
+name = "readiness-cli"
+version = "0.1.0"
+description = "CLI que evalua si un entorno esta listo"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0"]
