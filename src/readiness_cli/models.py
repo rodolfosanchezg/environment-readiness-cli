@@ -1,5 +1,5 @@
 # src/readiness_cli/models.py
-from dataclasses import dataclass 
+from dataclasses import dataclass, field 
 from enum import Enum
 
 class Status(str, Enum):
@@ -12,4 +12,4 @@ class CheckResult:
     name: str               # ej: "python_version", "readme_exists"
     status: Status
     message: str            # explicacion legible para el usuario
-    details: dict | None = None     # datos crudos opcionales (ej: version detectada)
+    details: dict = field(default_factory=dict)
