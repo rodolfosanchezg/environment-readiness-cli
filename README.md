@@ -68,6 +68,7 @@ readiness-cli --help
 
 ## Estructura de archivos y carpetas
 
+```text
 proyecto/
 ├── src/                     # código fuente, organizado por módulo
 │   └── nombre_paquete/
@@ -79,9 +80,11 @@ proyecto/
 ├── <archivo-de-config>      # pyproject.toml / package.json / Cargo.toml...
 ├── README.md
 └── .gitignore
+```
 
 ## Arquitectura
 
+```text
 cli.py (argparse)
 │
 ├──> diagnostics.run_diagnostics()   → versión Python, SO, ruta intérprete, venv activo
@@ -93,6 +96,7 @@ cli.py (argparse)
 - `checks.py`: verifica archivos/carpetas requeridos, recibe `base_path` como parámetro (facilita pruebas con carpetas temporales).
 - `report.py`: agrupa resultados individuales, calcula el estado general y exporta.
 - `cli.py`: único punto de entrada; no contiene lógica de negocio.
+```
 
 ### Decisiones técnicas
 
