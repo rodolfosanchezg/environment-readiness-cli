@@ -66,6 +66,20 @@ Ver todas las opciones disponibles:
 readiness-cli --help
 ```
 
+## Estructura de archivos y carpetas
+
+proyecto/
+├── src/                     # código fuente, organizado por módulo
+│   └── nombre_paquete/
+│       ├── diagnostics.*    # recolección de datos crudos
+│       ├── checks.*         # verificaciones de archivos/config
+│       ├── report.*         # consolidación y exportación
+│       └── cli.*            # punto de entrada / interfaz
+├── tests/                   # pruebas unitarias, misma forma que src/
+├── <archivo-de-config>      # pyproject.toml / package.json / Cargo.toml...
+├── README.md
+└── .gitignore
+
 ## Arquitectura
 
 cli.py (argparse)
