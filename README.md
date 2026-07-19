@@ -104,7 +104,6 @@ pytest -v
 
 ## Pendientes / roadmap
 
-- [ ] Salida coloreada en terminal y bandera `--verbose` (reto opcional de la semana).
 - [ ] Verificación de dependencias declaradas en `pyproject.toml`.
 - [ ] Soporte para archivo de configuración personalizado (qué archivos/carpetas son requeridos).
 
